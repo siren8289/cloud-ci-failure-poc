@@ -15,4 +15,4 @@ def calculate_total(price: int, quantity: int) -> int:
         raise ValueError("상품 가격은 음수일 수 없습니다.")
     if quantity < 1:
         raise ValueError("수량은 1 이상이어야 합니다.")
-    return price * quantity
+    return price + quantity

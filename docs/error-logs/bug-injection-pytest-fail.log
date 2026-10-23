@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.9, pytest-8.3.5, pluggy-1.7.0 -- /Users/jeong-yelim/.gemini/antigravity/scratch/cloud-ci-failure-poc/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/jeong-yelim/.gemini/antigravity/scratch/cloud-ci-failure-poc
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 4 items
+
+tests/test_calculator.py::test_normal_order FAILED                       [ 25%]
+tests/test_calculator.py::test_single_item FAILED                        [ 50%]
+tests/test_calculator.py::test_negative_price PASSED                     [ 75%]
+tests/test_calculator.py::test_invalid_quantity PASSED                   [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_normal_order _______________________________
+
+    def test_normal_order():
+        """정상 주문 금액 계산 검증: 10,000원 x 3개 = 30,000원"""
+>       assert calculate_total(10000, 3) == 30000
+E       assert 10003 == 30000
+E        +  where 10003 = calculate_total(10000, 3)
+
+tests/test_calculator.py:7: AssertionError
+_______________________________ test_single_item _______________________________
+
+    def test_single_item():
+        """단일 상품 주문 금액 계산 검증: 5,000원 x 1개 = 5,000원"""
+>       assert calculate_total(5000, 1) == 5000
+E       assert 5001 == 5000
+E        +  where 5001 = calculate_total(5000, 1)
+
+tests/test_calculator.py:12: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_calculator.py::test_normal_order - assert 10003 == 30000
+FAILED tests/test_calculator.py::test_single_item - assert 5001 == 5000
+========================= 2 failed, 2 passed in 0.12s ==========================
