@@ -29,6 +29,9 @@
   ```
 - **원인 분석**:
   `app/calculator.py`에서 곱셈 연산자(`*`)를 덧셈 연산자(`+`)로 의도적으로 변경하여 주문 총액 계산 로직 파괴.
-- **해결 계획**:
-  CI 파이프라인에서 실패(Failure, Exit Code 1) 감지 여부를 확인한 후, `return price * quantity`로 원복 예정.
+- **해결 방법**:
+  `app/calculator.py`의 return 문을 원래의 `price * quantity` 곱셈 로직으로 복구함.
+- **재검증 결과**:
+  로컬 pytest 4개 테스트 모두 통과(4 passed in 0.01s). GitHub Actions Run 3에서 CI 복구 완료 검증 예정.
+
 

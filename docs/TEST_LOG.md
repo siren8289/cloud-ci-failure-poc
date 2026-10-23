@@ -21,3 +21,14 @@
   - `tests/test_calculator.py::test_invalid_quantity`: PASSED
 - **목적 달성**: 계산식 버그가 단위 테스트에 의해 정상적으로 적발됨 확인.
 
+## [TEST-003] 단위 테스트 3차 검증 (오류 복구 및 회귀 방지)
+- **일시**: 2026-10-23 23:10:05
+- **명령어**: `/Users/jeong-yelim/.gemini/antigravity/scratch/cloud-ci-failure-poc/.venv/bin/python -m pytest -v`
+- **테스트 결과 요약**: 4 Passed, 0 Failed (Exit Code: 0)
+- **상세 결과**:
+  - `tests/test_calculator.py::test_normal_order`: PASSED (30,000 정상 산출)
+  - `tests/test_calculator.py::test_single_item`: PASSED (5,000 정상 산출)
+  - `tests/test_calculator.py::test_negative_price`: PASSED (ValueError)
+  - `tests/test_calculator.py::test_invalid_quantity`: PASSED (ValueError)
+
+
