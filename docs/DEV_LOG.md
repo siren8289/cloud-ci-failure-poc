@@ -25,5 +25,13 @@
 - **작업 내용**:
   1. `app/calculator.py` 로직 복구 (`price + quantity` -> `price * quantity`)
   2. 로컬 pytest 재검증: 4 passed in 0.01s (Exit Code: 0)
-  3. 커밋(`fix: restore correct calculation`) 및 Push 준비
+  3. 커밋(`fix: restore correct calculation`) 및 Push
+  4. GitHub Actions Run 3 확인: `success` 확인 (완전 복구)
+
+## [Phase 4] 2026-10-23 - 검증 보고서 및 실행 증거 문서화
+- **작업 내용**:
+  1. `docs/ci-run-history.txt` 생성 (Run 1~3 상태 및 URL 기록)
+  2. `docs/results.md` 종합 판정 보고서 작성
+  3. 최종 문서 커밋 및 Push
+
 
