@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.9, pytest-8.3.5, pluggy-1.7.0 -- /Users/jeong-yelim/.gemini/antigravity/scratch/cloud-ci-failure-poc/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/jeong-yelim/.gemini/antigravity/scratch/cloud-ci-failure-poc
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 4 items
+
+tests/test_calculator.py::test_normal_order PASSED                       [ 25%]
+tests/test_calculator.py::test_single_item PASSED                        [ 50%]
+tests/test_calculator.py::test_negative_price PASSED                     [ 75%]
+tests/test_calculator.py::test_invalid_quantity PASSED                   [100%]
+
+============================== 4 passed in 0.01s ===============================

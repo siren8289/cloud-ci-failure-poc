@@ -1,0 +1,14 @@
+# Python 가상환경
+.venv/
+venv/
+
+# Python 컴파일 및 캐시 파일
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# macOS 시스템 파일
+.DS_Store
+.AppleDouble
+.LSOverride
